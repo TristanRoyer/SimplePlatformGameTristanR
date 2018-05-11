@@ -31,6 +31,9 @@ local scene = composer.newScene( sceneName )
 -- local variables for the scene
 local bkg
 
+local winSound = audio.loadSound("Sounds/Winning-sound-effect.mp3")
+local winSoundChannel
+
 ----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -79,6 +82,8 @@ function scene:show( event )
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
+
+        winSoundChannel = audio.play(winSound)
 
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.

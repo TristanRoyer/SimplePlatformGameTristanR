@@ -31,6 +31,10 @@ local scene = composer.newScene( sceneName )
 -- local variables for the scene
 local bkg
 
+local loseSound = audio.loadSound("Sounds/youLose.mp3")
+local loseSoundChannel
+
+
 ----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
 -- LOCAL FUNCTIONS
@@ -79,6 +83,8 @@ function scene:show( event )
     -----------------------------------------------------------------------------------------
 
     elseif ( phase == "did" ) then
+
+         loseSoundChannel = audio.play(loseSound)
 
         -- Called when the scene is now on screen.
         -- Insert code here to make the scene come alive.

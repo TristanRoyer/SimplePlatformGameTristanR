@@ -77,11 +77,7 @@ local theBall
 
 local questionsAnswered = 0
 
-local loseSound = audio.loadSound("Sounds/youLose.mp3")
-local loseSoundChannel
 
-local winSound = audio.loadSound("Sounds/Winning-sound-effect.mp3")
-local winSoundChannel
 
 local popSound = audio.loadSound("Sounds/Pop.mp3")
 local popSoundChannel
@@ -563,7 +559,7 @@ function scene:create( event )
     -- Insert objects into the scene group in order to ONLY be associated with this scene
     sceneGroup:insert( ball2 )
 
-    --ball2
+    --ball3
     ball3 = display.newImageRect ("Images/SoccerBall.png", 70, 70)
     ball3.x = 920
     ball3.y = 134
